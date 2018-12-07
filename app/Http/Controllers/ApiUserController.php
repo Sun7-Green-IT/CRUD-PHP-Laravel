@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class ApiUserController extends Controller
 {
     public function get() {
-        return DB::table('user')->selectRaw("*")->limit(100)->get()->toJson();
+        return DB::table('user')->selectRaw("*")->get()->toJson();
     }
 
     public function getOne($uuid) {
